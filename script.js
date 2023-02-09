@@ -1,7 +1,21 @@
 const n = 15;
 const array = [];
+const initBtn = document.getElementById("initBtn");
+const playBtn = document.getElementById("playBtn");
 
 init();
+
+
+function disableButton() {
+    playBtn.disabled = true;
+    initBtn.disabled = true;
+    setTimeout(() => {
+        playBtn.disabled = false;
+        initBtn.disabled = false;
+        console.log('Button Activated')
+    }, 100)
+}
+
 
 function init(){
     for(let i=0;i<n;i++){
@@ -16,14 +30,16 @@ function play(){
     animate(moves);
 }
 
+
 function animate(moves){
+    disableButton();
     if(moves.length==0){
         showBars();
         return;
     }
     const move = moves.shift();
     const [i,j] = move.indicies;
-
+    
     if(move.type == "swap"){
         [array[i],array[j]]=[array[j],array[i]];
     }
