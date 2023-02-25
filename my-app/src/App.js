@@ -8,10 +8,9 @@ function App() {
     <div className="Algo">
       <div className="App">
         <SortingVisualizer>
-
         </SortingVisualizer>
       </div>
-      <div className="App1">
+      <div className="App">
         <PathfindingVisualizer></PathfindingVisualizer>
       </div>
     </div>

@@ -1,14 +1,11 @@
 .Algo{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  
 }
 .App {
   text-align: center;
-  /* display: none; */
 }
-.App1{
-  /* display: none; */
-}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
