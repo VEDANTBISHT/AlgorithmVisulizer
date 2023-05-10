@@ -9,8 +9,11 @@ class Node extends Component {
     }
     render() {
         const {
-            value,
-            key,
+            isWall,
+            isStart,
+            isEnd,
+            isVisited,
+            isShortestPath,
             onMouseDown,
             row,
             col,
@@ -18,7 +21,7 @@ class Node extends Component {
             onMouseUp,
             onMouseLeave
         } = this.props;
-        const cName = value === 5 ? "start" : value === 10 ? "end" : value === 1000 ? "wall" : "";
+        const cName = isStart ? "start" : isEnd ? "end" : isWall ? "wall" : isShortestPath ? "path" : isVisited ? "visited" : "";
         return (
             <td className={"node_" + cName}
                 id={`node-${row}-${col}`}
@@ -26,6 +29,9 @@ class Node extends Component {
                 onMouseEnter={() => onMouseEnter(row, col)}
                 onMouseUp={() => onMouseUp()}
                 onMouseLeave={() => onMouseLeave(row, col)}
+            // onTouchStart={()=>onMouseDown(row,col)}
+            // onTouchEnd={()=>onMouseLeave(row,col)}
+            // onTouchMove={()=>onMouseEnter(row,col)}
             ></td>
         )
     }
