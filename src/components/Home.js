@@ -48,12 +48,12 @@ class Home extends Component {
                 <div class="box title">
                     <div className="container-fluid solid">
                         <ul className="links">
-                            <li onClick={() => window.open("https://github.com/arnabuchiha/Algorithm-Visualizer", "_blank")}>
+                            <li onClick={() => window.open("https://github.com/VEDANTBISHT/AlgorithmVisulizer", "_blank")}>
                                 <i>
                                     <Github />
                                 </i>
                             </li>
-                            <li onClick={() => window.open("https://www.linkedin.com/in/funky-poseidon/", "_blank")}>
+                            <li onClick={() => window.open("https://www.linkedin.com/in/vedant-bisht-6621091b7", "_blank")}>
                                 <i>
                                     <LinkedIn />
                                 </i>
